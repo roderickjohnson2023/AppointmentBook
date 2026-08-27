@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Appointment(ABC):
-  def __init__(self, title, data, time):
+  def __init__(self, title, date, time):
     self.title = title
     self.date = date
     self.time = time
@@ -16,7 +16,7 @@ class Appointment(ABC):
 
 class MedicalAppointment(Appointment):
   def __init__(self, title, date, time, doctor, location):
-    super().init__(title, date, time)
+    super().__init__(title, date, time)
     self.doctor = doctor
     self.location = location 
 
